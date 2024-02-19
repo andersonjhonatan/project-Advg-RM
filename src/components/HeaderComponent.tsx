@@ -5,7 +5,7 @@ import Head from 'next/head';
 
 const roboto = Roboto({ weight: "400", subsets: ["latin"] });
 
-const HeaderLinks = [
+export const HeaderLinks = [
   'Inicio',
   'Sobre',
   'Área de Atuação',
