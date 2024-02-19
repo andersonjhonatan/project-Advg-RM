@@ -46,7 +46,7 @@ const Atuacao: IAtuacao[] = [
 
 const AtuacaoComponent = () => {
   return (
-    <div className="bg-zinc-900 h-3/4 w-screen py-6 px-20 object-cover ">
+    <div className="bg-zinc-900 h-3/4 w-screen py-6 px-20 object-cover pb-16">
       <h1 className={`${righteous.className} text-3xl text-white text-center mt-8`}>
         Área de atuação especializada
       </h1>
