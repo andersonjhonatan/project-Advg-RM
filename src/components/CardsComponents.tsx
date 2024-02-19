@@ -1,4 +1,7 @@
 import React from 'react'
+import { Roboto } from 'next/font/google'
+
+const roboto = Roboto({ weight: '400', subsets: ['latin'] })
 
 interface ICards {
   title: string
@@ -30,7 +33,7 @@ const cards: ICards[] = [
 
 const CardsComponents = () => {
   return (
-    <div className="w-full items-center flex flex-col px-20">
+    <div className="w-full items-center flex flex-col pb-16 px-20 ">
       <div className="text-3xl text-white p-12">
         <p className="text-center italic text-black">Por que me escolher? </p>
         <p className="text-center font-semibold text-black">Experiência e dedicação ao cliente!</p>
@@ -41,7 +44,7 @@ const CardsComponents = () => {
             className="flex flex-col border border-white bg-zinc-200 text-black rounded-md shadow-700 gap-4 p-8 justify-evenly items-center "
             key={index}
           >
-            <h1 className="text-3xl">{card.title}</h1>
+            <h1 className= {`${roboto.className} text-3xl text-black`}>{card.title}</h1>
             <p>{card.content}</p>
           </div>
         ))}
