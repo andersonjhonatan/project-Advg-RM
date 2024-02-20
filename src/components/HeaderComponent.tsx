@@ -1,7 +1,6 @@
 import Link from 'next/link'
 import React from 'react'
 import { Roboto } from 'next/font/google'
-import Head from 'next/head'
 
 const roboto = Roboto({ weight: '400', subsets: ['latin'] })
 

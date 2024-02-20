@@ -5,6 +5,7 @@ import { Roboto } from 'next/font/google'
 import { SlSocialInstagram } from 'react-icons/sl'
 import { SiWhatsapp, SiFacebook } from 'react-icons/si'
 import { MdOutlineArrowBackIosNew } from 'react-icons/md'
+import ButtonWhatsaap from './ButtonWhatsaap'
 
 const roboto = Roboto({ weight: '400', subsets: ['latin'], style: 'normal' })
 
@@ -31,9 +32,9 @@ const FaleComigo: IFaleComigo[] = [
 const FooterComponent = () => {
   return (
     <footer
-      className="bg-zinc-900 w-screen
-     flex flex-col items-center containerFooter"
+      className="bg-zinc-900 w-screen flex flex-col items-center containerFooter"
     >
+      <ButtonWhatsaap title="Atendimento Online" />
       <div className="w-full bg-zinc-900/90">
         <div className="flex mx-auto p-8 w-full max-w-7xl justify-between">
           <div className="flex flex-col items-center">
