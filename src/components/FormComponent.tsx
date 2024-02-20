@@ -21,7 +21,7 @@ const FormComponent = (props: Props) => {
       {errors.phone && <span>Este campo é obrigatório</span>}
       <input {...register('email', { required: true })} placeholder="Seu Email" />
       {errors.email && <span>Este campo é obrigatório</span>}
-      <textarea {...register('message', { required: true })} placeholder="Mensagem" />
+      <textarea {...register('message', { required: true })} placeholder="Deixe sua Mensagem aqui..." />
       {errors.message && <span>Este campo é obrigatório</span>}
       <button type="submit">Enviar</button>
     </form>
