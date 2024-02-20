@@ -3,6 +3,7 @@ import { GiInjustice } from 'react-icons/gi'
 
 import { Roboto, Righteous } from 'next/font/google'
 import { GiJusticeStar } from 'react-icons/gi'
+import { IoReturnDownForwardOutline } from 'react-icons/io5'
 
 const roboto = Roboto({ weight: '400', subsets: ['latin'] })
 const righteous = Righteous({ weight: '400', subsets: ['latin'] })
@@ -47,6 +48,10 @@ const Atuacao: IAtuacao[] = [
 const AtuacaoComponent = () => {
   return (
     <div className="bg-zinc-900 h-3/4 w-screen py-6 px-20 object-cover pb-16">
+      <div className="flex items-center gap-1 max-w-7xl mx-auto">
+          <IoReturnDownForwardOutline className='text-amber-300'/>
+          <h1 className={`${roboto.className} text-xs text-zinc-500`}>Atuação</h1>
+        </div>
       <h1 className={`${righteous.className} text-3xl text-white text-center mt-8`}>
         Área de atuação especializada
       </h1>

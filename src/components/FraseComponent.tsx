@@ -8,7 +8,7 @@ const FraseComponent = (props: Props) => {
     <div className="bg-amber-300 w-screen py-6 px-20 object-cover ">
       <div className="flex flex-col max-w-[60rem] mx-auto gap-4 items-center indent-4">
 
-      <p className={`'after:content-["”"] after:font-bold after:text-xl before:content-["“"] before:font-bold before:text-xl py-12 text-black font-light text-justify leading-6' ${roboto.className}`}>
+      <p className={`' before:content-["“"] before:text-white before:mr-2 before:font-bold before:text-xl after:content-["”"] after:font-bold after:text-xl after:text-white after:ml-2  py-12 text-black font-light text-justify leading-6' ${roboto.className}`}>
         Ser especializado em Direito Previdenciário não implica endossar ou julgar
         situações, mas sim em assegurar os direitos daqueles que buscam uma proteção
         social justa, conforme estabelecido pela legislação. O advogado previdenciário

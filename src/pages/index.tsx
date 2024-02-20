@@ -10,10 +10,10 @@ export default function Home() {
     <main className="mt-28">
       <AboutComponent />
       <CardsComponents />
-      <ValoresComponent />
-      <AtuacaoComponent />
       <FraseComponent />
+      <AtuacaoComponent />
       <ContatoCompoent />
+      <ValoresComponent />
     </main>
   )
 }
