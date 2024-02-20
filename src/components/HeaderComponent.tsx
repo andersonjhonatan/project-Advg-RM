@@ -1,9 +1,9 @@
 import Link from 'next/link'
 import React from 'react'
 import { Roboto } from 'next/font/google'
-import Head from 'next/head';
+import Head from 'next/head'
 
-const roboto = Roboto({ weight: "400", subsets: ["latin"] });
+const roboto = Roboto({ weight: '400', subsets: ['latin'] })
 
 export const HeaderLinks = [
   'Inicio',
@@ -17,18 +17,24 @@ export const HeaderLinks = [
 const HeaderComponent = () => {
   return (
     <header className="w-screen">
-      <div className="flex mx-auto p-8 justify-evenly bg-neutral-100 fixed top-0 left-auto right-auto w-full shadow-sm shadow-neutral-400 z-10 items-center">
-        <div className='flex flex-col items-center'>
-          <h1 className={`${roboto.className} text-2xl`}>Rosa Muniz</h1>
-          <p className={`${roboto.className} text-sm`}>Advocacia</p>
-        </div>
-        <div className="flex">
-
-        {HeaderLinks.map((link: string) => (
-          <nav key={link}>
-            <Link href={`#${link.toLowerCase()}`} className={`${roboto.className} text-sm hover:bg-slate-200 p-2 px-6 hover:rounded-sm`}>{link.toUpperCase()}</Link>
-          </nav>
-        ))}
+      <div className="flex   bg-neutral-100 fixed top-0  w-full shadow-sm shadow-neutral-400 z-10 ">
+        <div className="flex gap-8 max-w-7xl w-full items-center justify-between mx-auto py-8">
+          <div className="flex flex-col items-center">
+            <h1 className={`${roboto.className} text-2xl`}>Rosa Muniz</h1>
+            <p className={`${roboto.className} text-sm`}>Advocacia</p>
+          </div>
+          <div className="flex gap-8">
+            {HeaderLinks.map((link: string) => (
+              <nav key={link} className='flex gap-6'>
+                <Link
+                  href={`#${link.toLowerCase()}`}
+                  className={`${roboto.className} text-sm hover:bg-slate-200 flex hover:rounded-sm`}
+                >
+                  {link.toUpperCase()}
+                </Link>
+              </nav>
+            ))}
+          </div>
         </div>
       </div>
     </header>

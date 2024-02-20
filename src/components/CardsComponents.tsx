@@ -1,5 +1,7 @@
 import React from 'react'
-import { Roboto } from 'next/font/google'
+import { Roboto, Righteous } from 'next/font/google'
+
+const righteous = Righteous({ weight: '400', subsets: ['latin'] })
 
 const roboto = Roboto({ weight: '400', subsets: ['latin'] })
 
@@ -33,11 +35,11 @@ const cards: ICards[] = [
 
 const CardsComponents = () => {
   return (
-    <div className="w-full items-center flex flex-col pb-16 px-20 ">
+    <div className="w-full items-center flex flex-col py-20 " id='área de atuação'>
       <div className='max-w-7xl mx-auto flex flex-col'>
         <div className="text-3xl text-white p-12">
-          <p className="text-center italic text-black">Por que me escolher? </p>
-          <p className="text-center font-semibold text-black">
+          <p className="text-center italic text-black" >Por que me escolher? </p>
+          <p className={`${righteous.className} text-3xl text-black text-center`}>
             Experiência e dedicação ao cliente!
           </p>
         </div>

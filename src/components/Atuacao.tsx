@@ -47,37 +47,39 @@ const Atuacao: IAtuacao[] = [
 
 const AtuacaoComponent = () => {
   return (
-    <div className="bg-zinc-900 h-3/4 w-screen py-6 px-20 object-cover pb-16">
-      <div className="flex items-center gap-1 max-w-7xl mx-auto">
-          <IoReturnDownForwardOutline className='text-amber-300'/>
+    <div className="bg-zinc-900 w-screen py-24">
+      <div className="flex flex-col max-w-7xl mx-auto gap-2">
+        <div className="flex">
+          <IoReturnDownForwardOutline className="text-amber-300" />
           <h1 className={`${roboto.className} text-xs text-zinc-500`}>Atuação</h1>
         </div>
-      <h1 className={`${righteous.className} text-3xl text-white text-center mt-8`}>
-        Área de atuação especializada
-      </h1>
-      <div className="flex flex-col max-w-7xl mx-auto gap-4 items-center">
-        <div className="flex flex-col justify-center items-center border-x-2 border-t-2 rounded-t-md border-gray-700 w-full mt-16 py-4 gap-3">
-          <GiInjustice size={180} className="text-white" />
-          <h1 className={`${roboto.className} text-3xl text-white`}>
-            Direito Previdenciário
-          </h1>
-        </div>
-        <div className="grid grid-cols-2 grid-rows-3 gap-4 place-items-stretch mt-6">
-          {Atuacao.map((atuacao: IAtuacao, index) => (
-            <div
-              className="flex flex-col border border-gray-700 bg-zinc-200/5 text-white rounded-md shadow-700 gap-4 p-8 justify-evenly shadow-md shadow-zinc-900/5"
-              key={index}
-            >
-              <div className="flex items-center gap-2 ">
-                <GiJusticeStar size={25} className="text-amber-300" />
-                <h1 className={`${roboto.className} text-3xl text-white`}>
-                  {' '}
-                  {atuacao.title}
-                </h1>
+        <h1 className={`${righteous.className} text-3xl text-white mt-8`}>
+          Área de atuação especializada
+        </h1>
+        <div className="flex flex-col max-w-7xl mx-auto gap-4 items-center">
+          <div className="flex flex-col justify-center items-center border-x-2 border-t-2 rounded-t-md border-gray-700 w-full mt-16 py-4 gap-3">
+            <GiInjustice size={180} className="text-white" />
+            <h1 className={`${roboto.className} text-3xl text-white`}>
+              Direito Previdenciário
+            </h1>
+          </div>
+          <div className="grid grid-cols-2 grid-rows-3 gap-4 place-items-stretch mt-6">
+            {Atuacao.map((atuacao: IAtuacao, index) => (
+              <div
+                className="flex flex-col border border-gray-700 bg-zinc-200/5 text-white rounded-md shadow-700 gap-4 p-8 justify-evenly shadow-md shadow-zinc-900/5"
+                key={index}
+              >
+                <div className="flex items-center gap-2 ">
+                  <GiJusticeStar size={25} className="text-amber-300" />
+                  <h1 className={`${roboto.className} text-3xl text-white`}>
+                    {' '}
+                    {atuacao.title}
+                  </h1>
+                </div>
+                <p>{atuacao.content}</p>
               </div>
-              <p>{atuacao.content}</p>
-            </div>
-          ))}
+            ))}
+          </div>
         </div>
       </div>
     </div>
