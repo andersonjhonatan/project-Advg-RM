@@ -29,7 +29,8 @@ const FaleComigo: IFaleComigo[] = [
 
 const FooterComponent = () => {
   return (
-    <footer className="bg-zinc-900 w-full flex flex-col items-center containerFooter">
+    <footer className="bg-zinc-900 w-screen
+     flex flex-col items-center containerFooter">
       <div className="w-full bg-zinc-900/90">
         <div className="flex mx-auto p-8 w-full max-w-7xl justify-between">
           <div className="flex flex-col items-center">
@@ -62,7 +63,7 @@ const FooterComponent = () => {
               </div>
             ))}
             <div className="flex gap-4 mt-6">
-              <Link href="https://wa.me/5511979999999">
+              <Link href="https://www.instagram.com/rosamuniiiz/">
                 <SlSocialInstagram size={
                   25} className="text-white" />
               </Link>
