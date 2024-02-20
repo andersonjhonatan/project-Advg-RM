@@ -16,9 +16,13 @@ const FormComponent = (props: Props) => {
   return (
     <form onSubmit={handleSubmit(onSubmit)}>
       <input {...register('name', { required: true })} placeholder="Seu Nome" />
+      {errors.name && <span>Este campo é obrigatório</span>}
       <input {...register('phone', { required: true })} placeholder="Telefone" />
+      {errors.phone && <span>Este campo é obrigatório</span>}
       <input {...register('email', { required: true })} placeholder="Seu Email" />
+      {errors.email && <span>Este campo é obrigatório</span>}
       <textarea {...register('message', { required: true })} placeholder="Mensagem" />
+      {errors.message && <span>Este campo é obrigatório</span>}
       <button type="submit">Enviar</button>
     </form>
   )
