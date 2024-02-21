@@ -5,7 +5,7 @@ const righteous = Righteous({ weight: '400', subsets: ['latin'] })
 
 const AboutComponent = () => {
   return (
-    <div className="w-screen border border-yellow-600 containerHome h-screen" id="sobre">
+    <div className="w-screen containerHome h-screen" id="sobre">
       <div className="flex w-full max-w-7xl mx-auto items-center h-full">
         <div>
           <div className="gap-8 rounded-md flex flex-col bg-zinc-900/60 p-8 border border-zinc-600 w-1/3 justify-center">

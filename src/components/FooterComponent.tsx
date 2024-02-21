@@ -6,6 +6,7 @@ import { SlSocialInstagram } from 'react-icons/sl'
 import { SiWhatsapp, SiFacebook } from 'react-icons/si'
 import { MdOutlineArrowBackIosNew } from 'react-icons/md'
 import ButtonWhatsaap from './ButtonWhatsaap'
+import BackTopComponent from './BackTopComponent'
 
 const roboto = Roboto({ weight: '400', subsets: ['latin'], style: 'normal' })
 
@@ -32,17 +33,18 @@ const FaleComigo: IFaleComigo[] = [
 const FooterComponent = () => {
   return (
     <footer
-      className="bg-zinc-900 w-screen flex flex-col items-center containerFooter"
+      className="bg-zinc-900 w-screen flex flex-col items-center relative containerFooter"
     >
       <ButtonWhatsaap title="Atendimento Online" />
-      <div className="w-full bg-zinc-900/90">
+      <BackTopComponent title="Voltar ao topo" />
+      <div className="w-full bg-zinc-900/90 py-12">
         <div className="flex mx-auto p-8 w-full max-w-7xl justify-between">
           <div className="flex flex-col items-center">
             <h1 className={`${roboto.className} text-2xl text-white`}>Rosa Muniz</h1>
             <p className={`${roboto.className} text-sm text-zinc-300`}>Advocacia</p>
           </div>
           <div className="">
-            {HeaderLinks.map((link: string) => (
+            {HeaderLinks.slice(1, HeaderLinks.length).map((link: string) => (
               <nav key={link}>
                 <Link
                   href={`#${link.toLowerCase()}`}
@@ -85,7 +87,8 @@ const FooterComponent = () => {
             </div>
           </div>
         </div>
-        <div className="w-full flex justify-center">
+      </div>
+        <div className="w-full flex justify-center  bg-zinc-900/90">
           <p className={`${roboto.className} text-sm text-zinc-300`}>
             {' '}
             ©2024 por Rosa Muniz - Todos os Direitos Reservados | Desenvolvido por{' '}
@@ -97,7 +100,6 @@ const FooterComponent = () => {
             </a>
           </p>
         </div>
-      </div>
     </footer>
   )
 }

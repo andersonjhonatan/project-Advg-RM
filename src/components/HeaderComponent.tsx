@@ -27,7 +27,7 @@ const HeaderComponent = () => {
               <nav key={link} className='flex gap-6'>
                 <Link
                   href={`#${link.toLowerCase()}`}
-                  className={`${roboto.className} text-sm hover:bg-slate-200 flex hover:rounded-sm`}
+                  className={`${roboto.className} text-sm hover:underline underline-offset-4 p-2 flex hover:rounded-sm w-s`}
                 >
                   {link.toUpperCase()}
                 </Link>

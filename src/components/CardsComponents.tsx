@@ -35,7 +35,7 @@ const cards: ICards[] = [
 
 const CardsComponents = () => {
   return (
-    <div className="w-full items-center flex flex-col py-20 " id='área de atuação'>
+    <div className="w-full items-center flex flex-col py-10 pb-20 " id='área de atuação'>
       <div className='max-w-7xl mx-auto flex flex-col'>
         <div className="text-3xl text-white p-12">
           <p className="text-center italic text-black" >Por que me escolher? </p>
