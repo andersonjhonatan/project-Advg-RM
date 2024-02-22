@@ -7,6 +7,7 @@ import { SiWhatsapp, SiFacebook } from 'react-icons/si'
 import { MdOutlineArrowBackIosNew } from 'react-icons/md'
 import ButtonWhatsaap from './ButtonWhatsaap'
 import BackTopComponent from './BackTopComponent'
+import Image from 'next/image'
 
 const roboto = Roboto({ weight: '400', subsets: ['latin'], style: 'normal' })
 
@@ -32,16 +33,13 @@ const FaleComigo: IFaleComigo[] = [
 
 const FooterComponent = () => {
   return (
-    <footer
-      className="bg-zinc-900 w-screen flex flex-col items-center relative containerFooter"
-    >
+    <footer className="bg-zinc-900 w-screen flex flex-col items-center relative containerFooter">
       <ButtonWhatsaap title="Atendimento Online" />
       <BackTopComponent title="Voltar ao topo" />
       <div className="w-full bg-zinc-900/90 py-12">
-        <div className="flex mx-auto p-8 w-full max-w-7xl justify-between">
+        <div className="flex mx-auto items-center w-full max-w-7xl justify-between">
           <div className="flex flex-col items-center">
-            <h1 className={`${roboto.className} text-2xl text-white`}>Rosa Muniz</h1>
-            <p className={`${roboto.className} text-sm text-zinc-300`}>Advocacia</p>
+            <Image src="/logoheader1.png" width={250} height={100} alt="logo" />
           </div>
           <div className="">
             {HeaderLinks.slice(1, HeaderLinks.length).map((link: string) => (
@@ -88,18 +86,18 @@ const FooterComponent = () => {
           </div>
         </div>
       </div>
-        <div className="w-full flex justify-center  bg-zinc-900/90">
-          <p className={`${roboto.className} text-sm text-zinc-300`}>
-            {' '}
-            ©2024 por Rosa Muniz - Todos os Direitos Reservados | Desenvolvido por{' '}
-            <a
-              className="hover:underline"
-              href="https://portfolio-seven-flax-47.vercel.app/"
-            >
-              Anderson Jhonatan
-            </a>
-          </p>
-        </div>
+      <div className="w-full flex justify-center  bg-zinc-900/90">
+        <p className={`${roboto.className} text-sm text-zinc-300`}>
+          {' '}
+          ©2024 por Rosa Muniz - Todos os Direitos Reservados | Desenvolvido por{' '}
+          <a
+            className="hover:underline"
+            href="https://portfolio-seven-flax-47.vercel.app/"
+          >
+            Anderson Jhonatan
+          </a>
+        </p>
+      </div>
     </footer>
   )
 }

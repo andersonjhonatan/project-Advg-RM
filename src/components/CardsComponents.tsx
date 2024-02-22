@@ -43,10 +43,10 @@ const CardsComponents = () => {
             Experiência e dedicação ao cliente!
           </p>
         </div>
-        <div className="grid grid-cols-4 gap-4 place-items-stretch ">
+        <div className="grid sm:grid-cols-1 md:grid-cols-3 lg:grid-cols-4 gap-4 place-items-stretch ">
           {cards.map((card: ICards, index) => (
             <div
-              className="flex flex-col border border-white bg-zinc-200 text-black rounded-md shadow-700 gap-4 p-8 justify-evenly items-center "
+              className="flex flex-col border border-white border-[var(--primary-color)] text-black rounded-md shadow-700 gap-4 p-8 justify-evenly items-center "
               key={index}
             >
               <h1 className={`${roboto.className} text-xl text-black`}>{card.title}</h1>

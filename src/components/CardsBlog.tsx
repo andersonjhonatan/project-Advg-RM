@@ -12,10 +12,10 @@ type Props = {}
 
 const CardsBlogComponent = (props: Props) => {
   return (
-    <div>
+    <div className="w-full" id='blog'>
       <div className="flex flex-col max-w-7xl mx-auto gap-8 py-24">
         <div className="flex items-center gap-1">
-          <IoReturnDownForwardOutline className="text-amber-300" />
+          <IoReturnDownForwardOutline className="text-[var(--primary-color)]" />
           <h1 className={`${roboto.className} text-xs text-zinc-500`}>Blog</h1>
         </div>
         <div className="flex flex-col gap-6">

@@ -2,6 +2,12 @@
 @tailwind components;
 @tailwind utilities;
 
+:root {
+  --primary-color: #ff9999;
+  --secondary-color: #ffcccc;
+  --tertiary-color: #993366;
+}
+
 * {
   margin: 0;
   padding: 0;

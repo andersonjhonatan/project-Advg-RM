@@ -8,7 +8,7 @@ const AboutComponent = () => {
     <div className="w-screen containerHome h-screen" id="sobre">
       <div className="flex w-full max-w-7xl mx-auto items-center h-full">
         <div>
-          <div className="gap-8 rounded-md flex flex-col bg-zinc-900/60 p-8 border border-zinc-600 w-1/3 justify-center">
+          <div className="gap-8 rounded-md flex flex-col bg-zinc-900/60 p-8 border border-[var(--primary-color)] w-1/3 justify-center">
             <h1 className={`${righteous.className} text-3xl text-white`}>Sobre</h1>
             <p className={`${roboto.className} text-sm text-white`}>
               Lorem ipsum dolor sit amet consectetur, adipisicing elit. Enim quod, hic
@@ -26,7 +26,7 @@ const AboutComponent = () => {
               dignissimos nemo aliquid itaque molestias debitis hic provident quos.
             </p>
 
-            <button className={`bg-black text-white rounded-sm p-2 ${roboto.className}`}>
+            <button className={`border border-[var(--primary-color)] text-white rounded-sm p-2 ${roboto.className}`}>
               Entrar em contato
             </button>
           </div>

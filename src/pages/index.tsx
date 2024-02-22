@@ -11,8 +11,10 @@ export default function Home() {
   return (
     <main className="mt-28">
       <Head>
-        <title>Rosa Muniz - Advoc</title>
-        <link rel="icon" href="/favicon.ico" />
+        <title className="transition-all ease-in-out duration-300 ">
+          Home - Rosa Muniz | Advogada
+        </title>
+        <link rel="icon" href="/SIMBOLO.png" />
       </Head>
       <AboutComponent />
       <CardsComponents />
