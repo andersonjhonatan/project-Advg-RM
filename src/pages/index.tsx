@@ -1,5 +1,6 @@
 import AboutComponent from '@/components/AboutComponent'
 import AtuacaoComponent from '@/components/Atuacao'
+import CardsBlogComponent from '@/components/CardsBlog'
 import CardsComponents from '@/components/CardsComponents'
 import ContatoCompoent from '@/components/ContatoCompoent'
 import FraseComponent from '@/components/FraseComponent'
@@ -19,6 +20,7 @@ export default function Home() {
       <AtuacaoComponent />
       <ContatoCompoent />
       <ValoresComponent />
+      <CardsBlogComponent />
     </main>
   )
 }

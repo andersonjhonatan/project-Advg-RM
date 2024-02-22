@@ -47,7 +47,7 @@ const Atuacao: IAtuacao[] = [
 
 const AtuacaoComponent = () => {
   return (
-    <div className="bg-zinc-900 w-screen py-24">
+    <div className="bg-zinc-900 w-screen py-24" id='áreadeatuação'>
       <div className="flex flex-col max-w-7xl mx-auto gap-2">
         <div className="flex">
           <IoReturnDownForwardOutline className="text-amber-300" />
