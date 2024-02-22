@@ -15,6 +15,10 @@ export default function Home() {
           Home - Rosa Muniz | Advogada
         </title>
         <link rel="icon" href="/SIMBOLO.png" />
+        <meta
+          name="description"
+          content="Conheça os serviços jurídicos da Advogada Rosa Muniz. Atuação especializada, valores sólidos e compromisso com os clientes. Entre em contato para obter assistência legal."
+        />
       </Head>
       <AboutComponent />
       <CardsComponents />

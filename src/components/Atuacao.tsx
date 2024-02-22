@@ -1,12 +1,8 @@
 import React from 'react'
-import { GiInjustice } from 'react-icons/gi'
-
-import { Roboto, Righteous } from 'next/font/google'
-import { GiJusticeStar } from 'react-icons/gi'
 import { IoReturnDownForwardOutline } from 'react-icons/io5'
+import { roboto, righteous } from '../fonts/FIndex'
+import { GiInjustice, GiJusticeStar } from 'react-icons/gi'
 
-const roboto = Roboto({ weight: '400', subsets: ['latin'] })
-const righteous = Righteous({ weight: '400', subsets: ['latin'] })
 
 interface IAtuacao {
   title: string

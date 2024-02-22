@@ -1,15 +1,13 @@
 import React from 'react'
 import { HeaderLinks } from './HeaderComponent'
 import Link from 'next/link'
-import { Roboto } from 'next/font/google'
 import { SlSocialInstagram } from 'react-icons/sl'
 import { SiWhatsapp, SiFacebook } from 'react-icons/si'
-import { MdOutlineArrowBackIosNew } from 'react-icons/md'
 import ButtonWhatsaap from './ButtonWhatsaap'
 import BackTopComponent from './BackTopComponent'
 import Image from 'next/image'
+import { roboto } from '../fonts/FIndex'
 
-const roboto = Roboto({ weight: '400', subsets: ['latin'], style: 'normal' })
 
 interface IFaleComigo {
   title: string
@@ -67,18 +65,20 @@ const FooterComponent = () => {
               </div>
             ))}
             <div className="flex gap-4 mt-6">
-              <Link href="https://www.instagram.com/rosamuniiiz/">
+              <Link href="https://www.instagram.com/rosamuniiiz/" aria-label='Instagram'>
                 <SlSocialInstagram size={25} className="text-white" />
               </Link>
               <Link
                 href="https://wa.me/5511979999999"
                 className="flex flex-col items-center justify-center gap-4"
+                aria-label='Facebook'
               >
                 <SiFacebook size={25} className="text-white" />
               </Link>
               <Link
                 href="https://wa.me/5511979999999"
                 className="flex flex-col items-center justify-center gap-4"
+                aria-label='Whatsapp'
               >
                 <SiWhatsapp size={25} className="text-white" />
               </Link>
@@ -93,6 +93,9 @@ const FooterComponent = () => {
           <a
             className="hover:underline"
             href="https://portfolio-seven-flax-47.vercel.app/"
+            target="_blank"
+            rel="noreferrer"
+            aria-label="Desenvolvido por Anderson Jhonatan"
           >
             Anderson Jhonatan
           </a>

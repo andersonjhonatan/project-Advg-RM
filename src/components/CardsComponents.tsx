@@ -1,9 +1,6 @@
 import React from 'react'
-import { Roboto, Righteous } from 'next/font/google'
+import { roboto, righteous } from '../fonts/FIndex'
 
-const righteous = Righteous({ weight: '400', subsets: ['latin'] })
-
-const roboto = Roboto({ weight: '400', subsets: ['latin'] })
 
 interface ICards {
   title: string
@@ -35,7 +32,7 @@ const cards: ICards[] = [
 
 const CardsComponents = () => {
   return (
-    <div className="w-full items-center flex flex-col py-10 pb-20 " id='área de atuação'>
+    <div className="w-full items-center flex flex-col pb-20 " id='área de atuação'>
       <div className='max-w-7xl mx-auto flex flex-col'>
         <div className="text-3xl text-white p-12">
           <p className="text-center italic text-black" >Por que me escolher? </p>
@@ -46,7 +43,7 @@ const CardsComponents = () => {
         <div className="grid sm:grid-cols-1 md:grid-cols-3 lg:grid-cols-4 gap-4 place-items-stretch ">
           {cards.map((card: ICards, index) => (
             <div
-              className="flex flex-col border border-white border-[var(--primary-color)] text-black rounded-md shadow-700 gap-4 p-8 justify-evenly items-center "
+              className="flex flex-col border border-[var(--primary-color)] text-black rounded-md shadow-700 gap-4 p-8 justify-evenly items-center "
               key={index}
             >
               <h1 className={`${roboto.className} text-xl text-black`}>{card.title}</h1>

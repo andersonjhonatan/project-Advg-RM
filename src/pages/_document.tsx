@@ -4,7 +4,7 @@ import { Html, Head, Main, NextScript } from 'next/document'
 
 export default function Document() {
   return (
-    <Html lang="pt_BR">
+    <Html lang="pt-BR">
       <Head />
       <body>
         <HeaderComponent />

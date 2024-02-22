@@ -24,10 +24,13 @@ input {
 }
 
 .containerHome {
-  background-image: url('/logo.jpg');
+  background-image: url('/logo.png');
   background-repeat: no-repeat;
   background-size: cover;
   background-position: center;
+  padding: 10rem 0;
+  height: auto;
+  width: 100vw;
 }
 
 .containerFooter {

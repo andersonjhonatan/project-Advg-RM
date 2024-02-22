@@ -46,7 +46,7 @@ const FormBlogComponents = (props: Props) => {
         {...register('description', { required: true })}
         placeholder="Escreva o conteúdo do artigo"
       />
-      <button className="bg-amber-500 py-3 px-4 text-white w-full">Registrar</button>
+      <button className="bg-amber-500 py-3 px-4 text-white w-full" aria-labelledby='Botão para registrar'>Registrar</button>
     </form>
   )
 }

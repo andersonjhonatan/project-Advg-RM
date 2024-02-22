@@ -1,18 +1,16 @@
 import React from 'react'
 import { IoReturnDownForwardOutline } from 'react-icons/io5'
-import { Roboto, Righteous } from 'next/font/google'
 import { SlArrowLeft, SlArrowRight } from 'react-icons/sl'
 import Image from 'next/image'
 import Link from 'next/link'
+import { roboto, righteous } from '../fonts/FIndex'
 
-const roboto = Roboto({ weight: '400', subsets: ['latin'] })
-const righteous = Righteous({ weight: '400', subsets: ['latin'] })
 
 type Props = {}
 
 const CardsBlogComponent = (props: Props) => {
   return (
-    <div className="w-full" id='blog'>
+    <div className="w-full" id="blog">
       <div className="flex flex-col max-w-7xl mx-auto gap-8 py-24">
         <div className="flex items-center gap-1">
           <IoReturnDownForwardOutline className="text-[var(--primary-color)]" />
@@ -24,18 +22,18 @@ const CardsBlogComponent = (props: Props) => {
               Artigos em destaque
             </h1>
             <section className="flex items-center justify-center gap-4 pr-2">
-              <button>
+              <button aria-label="Botão_para_voltar">
                 <SlArrowLeft size={30} className="text-zinc-500" />
               </button>
 
-              <button>
+              <button aria-label="Botao_para_avancar">
                 <SlArrowRight size={30} className="text-zinc-500" />
               </button>
             </section>
           </div>
           <div>
             <div className="flex flex-col gap-4 border-2 border-gray-700 rounded-md">
-              <Image src="/logo.jpg" width={300} height={250} alt="image" />
+              <Image src="/logo.png" width={100} height={100} alt="image" className='w-72 h-auto'/>
               <h1 className={`${righteous.className} text-xl text-black`}>
                 Como ser um bom programador
               </h1>

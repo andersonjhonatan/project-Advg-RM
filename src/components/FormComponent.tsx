@@ -60,7 +60,7 @@ const FormComponent = (props: Props) => {
           </p>
         </section>
       </div>
-      <button type="submit" className='bg-white border border-[var(--primary-color)]  hover:bg-[var(--primary-color)] text-black transition-all duration-300 hover:text-white  py-2 w-56 rounded'>Enviar</button>
+      <button type="submit" className='bg-white border border-[var(--primary-color)]  hover:bg-[var(--primary-color)] text-black transition-all duration-300 hover:text-white  py-2 w-56 rounded' aria-labelledby='Botão para registrar'>Enviar</button>
     </form>
   )
 }
