@@ -4,8 +4,6 @@ import React from 'react'
 import Image from 'next/image'
 import { poppins } from '../fonts/FIndex'
 
-
-
 export const HeaderLinks = [
   'Inicio',
   'Sobre',
@@ -21,7 +19,15 @@ const HeaderComponent = () => {
       <div className="flex   bg-[var(--primary-color)] fixed top-0  w-full shadow-sm z-10 ">
         <div className="flex gap-8 max-w-7xl w-full items-center justify-between mx-auto py-8">
           <div className="flex flex-col items-center">
-            <Image src="/logoheader1.png" width={250} height={100} alt="logo" className="cursor-pointer w-auto" />
+            <Link href="/" className="cursor-pointer" aria-label="logo" >
+              <Image
+                src="/logoheader1.png"
+                width={250}
+                height={100}
+                alt="logo"
+                className="cursor-pointer w-auto"
+              />
+            </Link>
           </div>
           <div className="flex gap-8">
             {HeaderLinks.map((link: string) => (

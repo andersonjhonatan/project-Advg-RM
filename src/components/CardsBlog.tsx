@@ -4,12 +4,11 @@ import { SlArrowLeft, SlArrowRight } from 'react-icons/sl'
 import Image from 'next/image'
 import Link from 'next/link'
 import { roboto, righteous } from '../fonts/FIndex'
-
+import ArtigosComponent from './ArtigosComponent'
 
 type Props = {}
 
 const CardsBlogComponent = (props: Props) => {
-
   const nextCard = () => {
     console.log('next')
   }
@@ -29,7 +28,7 @@ const CardsBlogComponent = (props: Props) => {
               Artigos em destaque
             </h1>
             <section className="flex items-center justify-center gap-4 pr-2">
-              <button aria-label="Botão_para_voltar" onClick={prevCard}> 
+              <button aria-label="Botão_para_voltar" onClick={prevCard}>
                 <SlArrowLeft size={30} className="text-zinc-500" />
               </button>
 
@@ -38,18 +37,14 @@ const CardsBlogComponent = (props: Props) => {
               </button>
             </section>
           </div>
-          <div>
-            <div className="flex flex-col gap-4 border-2 border-gray-700 rounded-md">
-              <Image src="/logo.png" width={100} height={100} alt="image" className='w-72 h-auto'/>
-              <h1 className={`${righteous.className} text-xl text-black`}>
-                Como ser um bom programador
-              </h1>
-              <p className="text-zinc-500">10/05/2022</p>
-              <p className="text-zinc-500">10 min de leitura</p>
-              <Link href="/blog"> Leia mais</Link>
-            </div>
-          </div>
         </div>
+        <ArtigosComponent />
+        <Link
+          href="/blog"
+          className="text-white bg-[var(--primary-color)] border border-[var(--primary-color)] lg:w-2/12 w-1/2 sm:w-full md:w-1/2 p-2 rounded-md hover:bg-white hover:text-black duration-300 ease-in-out hover justify-center items-center text-center"
+        >
+          Ver todos
+        </Link>
       </div>
     </div>
   )
