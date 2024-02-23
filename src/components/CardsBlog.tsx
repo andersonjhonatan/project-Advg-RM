@@ -9,6 +9,13 @@ import { roboto, righteous } from '../fonts/FIndex'
 type Props = {}
 
 const CardsBlogComponent = (props: Props) => {
+
+  const nextCard = () => {
+    console.log('next')
+  }
+  const prevCard = () => {
+    console.log('prev')
+  }
   return (
     <div className="w-full" id="blog">
       <div className="flex flex-col max-w-7xl mx-auto gap-8 py-24">
@@ -22,11 +29,11 @@ const CardsBlogComponent = (props: Props) => {
               Artigos em destaque
             </h1>
             <section className="flex items-center justify-center gap-4 pr-2">
-              <button aria-label="Botão_para_voltar">
+              <button aria-label="Botão_para_voltar" onClick={prevCard}> 
                 <SlArrowLeft size={30} className="text-zinc-500" />
               </button>
 
-              <button aria-label="Botao_para_avancar">
+              <button aria-label="Botao_para_avancar" onClick={nextCard}>
                 <SlArrowRight size={30} className="text-zinc-500" />
               </button>
             </section>

@@ -4,7 +4,7 @@ import Link from 'next/link'
 import { SlSocialInstagram } from 'react-icons/sl'
 import { SiWhatsapp, SiFacebook } from 'react-icons/si'
 import ButtonWhatsaap from './ButtonWhatsaap'
-import BackTopComponent from './BackTopComponent'
+import ButtonBackTopComponent from './BackTopComponent'
 import Image from 'next/image'
 import { roboto } from '../fonts/FIndex'
 
@@ -33,11 +33,11 @@ const FooterComponent = () => {
   return (
     <footer className="bg-zinc-900 w-screen flex flex-col items-center relative containerFooter">
       <ButtonWhatsaap title="Atendimento Online" />
-      <BackTopComponent title="Voltar ao topo" />
+      <ButtonBackTopComponent title="Voltar ao topo"  />
       <div className="w-full bg-zinc-900/90 py-12">
         <div className="flex mx-auto items-center w-full max-w-7xl justify-between">
           <div className="flex flex-col items-center">
-            <Image src="/logoheader1.png" width={250} height={100} alt="logo" />
+            <Image src="/logoheader1.png" width={250} height={100} alt="logo" className="cursor-pointer w-auto"  />
           </div>
           <div className="">
             {HeaderLinks.slice(1, HeaderLinks.length).map((link: string) => (
