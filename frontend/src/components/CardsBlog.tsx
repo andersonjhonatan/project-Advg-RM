@@ -1,13 +1,18 @@
 import React from 'react'
 import { IoReturnDownForwardOutline } from 'react-icons/io5'
 import { SlArrowLeft, SlArrowRight } from 'react-icons/sl'
-import Link from 'next/link'
+import { useRouter } from 'next/navigation'
 import { roboto, righteous } from '../fonts/FIndex'
 import ArtigosComponent from './ArtigosComponent'
 
 type Props = {}
 
 const CardsBlogComponent = (props: Props) => {
+  const router = useRouter()
+
+  const nextMyblog = () => {
+    router.push('/myBlog')
+  }
   const nextCard = () => {
     console.log('next')
   }
@@ -38,12 +43,12 @@ const CardsBlogComponent = (props: Props) => {
           </div>
         </div>
         <ArtigosComponent />
-        <Link
-          href="/blog"
+        <button
+          onClick={nextMyblog}
           className="text-white bg-[var(--primary-color)] border border-[var(--primary-color)] lg:w-2/12 w-1/2 sm:w-full md:w-1/2 p-2 rounded-md hover:bg-white hover:text-black duration-300 ease-in-out hover justify-center items-center text-center"
         >
           Ver todos
-        </Link>
+        </button>
       </div>
     </div>
   )

@@ -16,11 +16,11 @@ const ButtonWhatsaap = (props: Props) => {
   useEffect(() => {
     const onScroll = () => setScroll({ scroll: window.scrollY })
     return onScroll()
-  }, [scroll])
+  }, [])
 
   return (
     <Link
-      href="https://api.whatsapp.com/send?phone=5511999999999"
+      href="https://api.whatsapp.com/send?phone=5582996318357&text=Olá!%20um%20prazer%20te%20ter%20por%20aqui!%20%20Me%20conta%20sobre%20você:%20Qual%20seu%20nome%20e%20sua%20cidade?"
       className={`bg-green-600 text-white p-2 rounded-full fixed ${
         scroll.scroll < 200 ? 'bottom-4' : 'bottom-80'
       } right-3 px-4 z-50 ${

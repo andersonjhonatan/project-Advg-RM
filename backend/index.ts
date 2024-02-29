@@ -1,5 +1,5 @@
-const express = require('express')
-
+import express from 'express'
+import contactRouter from './src/routes/contactRoutes'
 const app = express()
 
 //CORS
@@ -10,11 +10,15 @@ app.use((req, res, next) => {
   next()
 })
 
+app.use((req, res, next) => {
+  console.log(`${req.method} ${req.url}`);
+  next();
+});
+
+//ROUTES
+app.use("/api", contactRouter);
 //ROUTES
 
-app.get('/', (req, res) => {
-  res.send('Hello World!')
-})
 
 const PORT = process.env.PORT || 4000
 

@@ -33,11 +33,7 @@ const HeaderComponent = () => {
             {HeaderLinks.map((link: string) => (
               <nav key={link} className="flex gap-6">
                 <Link
-                  href={`/#${
-                    link.includes(' ')
-                      ? link.toLowerCase().replaceAll(' ', '')
-                      : link.toLowerCase()
-                  }`}
+                  href={`/#${link.toLowerCase().replaceAll(' ', '')}`}
                   className={`${poppins.className} text-sm hover:underline underline-offset-4 p-2 flex hover:rounded-sm text-white font-bold `}
                 >
                   {link}

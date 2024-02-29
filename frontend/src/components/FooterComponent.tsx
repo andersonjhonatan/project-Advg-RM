@@ -21,11 +21,11 @@ const FaleComigo: IFaleComigo[] = [
   },
   {
     title: 'Email',
-    content: '9Zx2c@example.com',
+    content: 'contatorosamuniz@gmail.com',
   },
   {
     title: 'Telefone',
-    content: '(11) 9 9999-9999',
+    content: '(82) 9 9631-8357',
   },
 ]
 
@@ -65,19 +65,12 @@ const FooterComponent = () => {
               </div>
             ))}
             <div className="flex gap-4 mt-6">
-              <Link href="https://www.instagram.com/rosamuniiiz/" aria-label='Instagram'>
+              <Link href="https://www.instagram.com/rosamuniz.adv" aria-label='Instagram' className='cursor-pointer z-20'>
                 <SlSocialInstagram size={25} className="text-white" />
               </Link>
               <Link
-                href="https://wa.me/5511979999999"
-                className="flex flex-col items-center justify-center gap-4"
-                aria-label='Facebook'
-              >
-                <SiFacebook size={25} className="text-white" />
-              </Link>
-              <Link
-                href="https://wa.me/5511979999999"
-                className="flex flex-col items-center justify-center gap-4"
+                href="https://wa.me/5582996318357"
+                className="flex flex-col items-center justify-center gap-4 cursor-pointer z-20"
                 aria-label='Whatsapp'
               >
                 <SiWhatsapp size={25} className="text-white" />

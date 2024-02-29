@@ -4,6 +4,8 @@ services:
     build:
       context: ./backend
       dockerfile: backend.dockerfile
+    volumes:
+      - ./backend/dist:/app/dist
     ports:
       - 4000:4000
     environment:
@@ -19,5 +21,6 @@ services:
       - 5432:5432
     volumes:
       - pgdata:/var/lib/postgresql/data
+
 volumes:
   pgdata: {}

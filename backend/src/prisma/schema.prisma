@@ -12,3 +12,11 @@ model User {
   name  String
   email String
 }
+
+model Contact {
+  id    String @id
+  name  String
+  email String
+  phone String
+  text  String
+}
