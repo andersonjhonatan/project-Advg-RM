@@ -16,9 +16,19 @@ const contactService_1 = __importDefault(require("../service/contactService"));
 class ContactController {
     createContact(req, res) {
         return __awaiter(this, void 0, void 0, function* () {
-            const contact = req;
-            const newContact = yield contactService_1.default.createContact(contact);
-            res.status(200).json(newContact);
+            try {
+                const contact = req.body;
+                if (!contact.name || !contact.phone || !contact.email || !contact.text) {
+                    res.status(400).json({ error: 'Todos os campos são obrigatórios' });
+                    return;
+                }
+                const newContact = yield contactService_1.default.createContact(contact);
+                res.status(200).json(newContact);
+            }
+            catch (error) {
+                console.error('Erro ao criar contato:', error);
+                res.status(500).json({ error: 'Erro interno do servidor' });
+            }
         });
     }
 }

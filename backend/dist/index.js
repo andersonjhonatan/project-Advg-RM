@@ -6,6 +6,7 @@ Object.defineProperty(exports, "__esModule", { value: true });
 const express_1 = __importDefault(require("express"));
 const contactRoutes_1 = __importDefault(require("./src/routes/contactRoutes"));
 const app = (0, express_1.default)();
+app.use(express_1.default.json());
 //CORS
 app.use((req, res, next) => {
     res.setHeader('Access-Control-Allow-Origin', '*');
@@ -13,9 +14,9 @@ app.use((req, res, next) => {
     res.setHeader('Access-Control-Allow-Headers', 'Content-Type');
     next();
 });
-app.use((req, res, next) => {
-    console.log(`${req.method} ${req.url}`);
-    next();
+//hello world
+app.get('/', (req, res) => {
+    res.send('Hello World!');
 });
 //ROUTES
 app.use("/api", contactRoutes_1.default);

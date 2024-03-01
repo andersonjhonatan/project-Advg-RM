@@ -2,6 +2,8 @@ import express from 'express'
 import contactRouter from './src/routes/contactRoutes'
 const app = express()
 
+app.use(express.json());
+
 //CORS
 app.use((req, res, next) => {
   res.setHeader('Access-Control-Allow-Origin', '*')
@@ -10,9 +12,10 @@ app.use((req, res, next) => {
   next()
 })
 
-app.use((req, res, next) => {
-  console.log(`${req.method} ${req.url}`);
-  next();
+//hello world
+
+app.get('/', (req, res) => {
+  res.send('Hello World!');
 });
 
 //ROUTES

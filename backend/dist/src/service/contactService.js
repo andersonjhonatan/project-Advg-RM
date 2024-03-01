@@ -14,16 +14,21 @@ const prisma = new client_1.PrismaClient();
 class ContactService {
     createContact(contact) {
         return __awaiter(this, void 0, void 0, function* () {
-            const newContact = yield prisma.contact.create({
-                data: {
-                    id: contact.id,
-                    name: contact.name,
-                    phone: contact.phone,
-                    email: contact.email,
-                    text: contact.text,
-                },
-            });
-            return newContact;
+            try {
+                const newContact = yield prisma.contact.create({
+                    data: {
+                        name: contact.name || '',
+                        phone: contact.phone || '',
+                        email: contact.email || '',
+                        text: contact.text || '',
+                    },
+                });
+                return newContact;
+            }
+            catch (error) {
+                console.error('Error creating contact:', error);
+                throw error;
+            }
         });
     }
 }
