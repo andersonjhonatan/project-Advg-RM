@@ -21,7 +21,7 @@ class ContactService {
           text: contact.text || '',
         },
       })
-      await this.sendEmail(contact)
+      this.sendEmail(contact)
       return newContact
     } catch (error) {
       console.error('Error creating contact:', error)
@@ -32,25 +32,20 @@ class ContactService {
   async sendEmail(contact: Contact) {
     try {
       const transporter = nodemailer.createTransport({
-        host: 'smtp.gmail.com',
-        port: 465,
-        secure: false,
+        host: 'smtp.ethereal.email',
+        port: 587,
         auth: {
-          user: process.env.EMAIL_USER,
-          pass: process.env.EMAIL_PASS,
+          user: 'polly.stokes@ethereal.email',
+          pass: 'HVNY5k4wcZzAE4nyNW',
         },
       })
       const mailOptions = {
         from: `${contact.name} <${contact.email}>`,
         to: 'ajhonatan76@gmail.com',
         subject: 'Contato pelo site',
-        html: `
-    <p><strong>Nome:</strong> ${contact.name}</p>
-    <p><strong>Email:</strong> ${contact.email}</p>
-    <p><strong>Telefone:</strong> ${contact.phone}</p>
-    <p><strong>Mensagem:</strong> ${contact.text}</p>
-  `,
+        text: `${contact.text}`,
       }
+      console.log('Mail Options:', mailOptions);
       await transporter.sendMail(mailOptions)
       console.log('E-mail enviado com sucesso!')
     } catch (error) {

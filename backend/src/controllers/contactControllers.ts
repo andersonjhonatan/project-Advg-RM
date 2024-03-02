@@ -25,17 +25,6 @@ class ContactController {
       res.status(500).json({ error: 'Erro interno do servidor' })
     }
   }
-
-  async getContacts(req: Request, res: Response): Promise<void> {
-    try {
-      const contact = req.body
-      const contacts = await contato.sendEmail(contact)
-      res.status(200).json(contacts)
-    } catch (error) {
-      console.error('Erro ao buscar contatos:', error)
-      res.status(500).json({ error: 'Erro interno do servidor' })
-    }
-  }
 }
 
 export default new ContactController()
