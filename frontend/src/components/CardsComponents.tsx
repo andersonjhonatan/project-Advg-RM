@@ -1,6 +1,6 @@
 import React from 'react'
 import { roboto, righteous } from '../fonts/FIndex'
-
+import Animations from '../Animations/Animations'
 
 interface ICards {
   title: string
@@ -31,11 +31,17 @@ const cards: ICards[] = [
 ]
 
 const CardsComponents = () => {
+  Animations()
   return (
-    <div className="w-full items-center flex flex-col pb-20 " id='área de atuação'>
-      <div className='max-w-7xl mx-auto flex flex-col'>
+    <div
+      className="w-full items-center flex flex-col pb-20 "
+      id="área de atuação"
+      data-aos="zoom-in"
+      data-aos-duration="1000"
+    >
+      <div className="max-w-7xl mx-auto flex flex-col">
         <div className="text-3xl text-white p-12">
-          <p className="text-center italic text-black" >Por que me escolher? </p>
+          <p className="text-center italic text-black">Por que me escolher? </p>
           <p className={`${righteous.className} text-3xl text-black text-center`}>
             Experiência e dedicação ao cliente!
           </p>
@@ -47,7 +53,11 @@ const CardsComponents = () => {
               key={index}
             >
               <h1 className={`${roboto.className} text-xl text-black`}>{card.title}</h1>
-              <p className={`${roboto.className} text-sm text-black text-justify break-words leading-relaxed whitespace-normal break-all`}>{card.content}</p>
+              <p
+                className={`${roboto.className} text-sm text-black text-justify break-words leading-relaxed whitespace-normal break-all`}
+              >
+                {card.content}
+              </p>
             </div>
           ))}
         </div>

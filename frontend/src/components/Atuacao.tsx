@@ -2,6 +2,7 @@ import React from 'react'
 import { IoReturnDownForwardOutline } from 'react-icons/io5'
 import { roboto, righteous } from '../fonts/FIndex'
 import { GiInjustice, GiJusticeStar } from 'react-icons/gi'
+import Animations from '@/Animations/Animations'
 
 
 interface IAtuacao {
@@ -42,8 +43,10 @@ const Atuacao: IAtuacao[] = [
 ]
 
 const AtuacaoComponent = () => {
+  Animations()
   return (
-    <div className="bg-zinc-900 w-screen py-24" id='áreadeatuação'>
+    <div className="bg-zinc-900 w-screen py-24" id='áreadeatuação' data-aos="zoom-out"
+    data-aos-duration="1000">
       <div className="flex flex-col max-w-7xl mx-auto gap-2">
         <div className="flex">
           <IoReturnDownForwardOutline className="text-[var(--primary-color)]" />

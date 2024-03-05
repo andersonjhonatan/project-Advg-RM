@@ -3,7 +3,6 @@ import AtuacaoComponent from '@/components/Atuacao'
 import CardsBlogComponent from '@/components/CardsBlog'
 import CardsComponents from '@/components/CardsComponents'
 import ContatoCompoent from '@/components/ContatoCompoent'
-import FooterComponent from '@/components/FooterComponent'
 import FraseComponent from '@/components/FraseComponent'
 import ValoresComponent from '@/components/ValoresComponent'
 import Head from 'next/head'
@@ -27,7 +26,7 @@ export default function Home() {
       <AtuacaoComponent />
       <ContatoCompoent />
       <ValoresComponent />
-      <CardsBlogComponent />
+     {/*  <CardsBlogComponent /> */}
     </main>
   )
 }

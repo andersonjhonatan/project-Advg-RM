@@ -2,6 +2,16 @@
 @tailwind components;
 @tailwind utilities;
 
+/* aos animations */
+
+[data-aos='fade-up'] {
+  transform: translate3d(0, 100px, 0);
+}
+
+[data-aos='fade-up'].aos-animate {
+  transform: translate3d(0, 0, 0);
+}
+
 :root {
   --primary-color: #ff9999;
   --secondary-color: #ffcccc;

@@ -17,7 +17,7 @@ interface IFaleComigo {
 const FaleComigo: IFaleComigo[] = [
   {
     title: 'Endereço',
-    content: 'Avenida Paulista, 1000, São Paulo, SP',
+    content: 'Rua Getúlio Vargas, 162, centro, São José da Tapera-Al',
   },
   {
     title: 'Email',

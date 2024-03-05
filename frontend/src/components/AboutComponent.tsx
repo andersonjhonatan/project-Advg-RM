@@ -1,9 +1,10 @@
 import React from 'react'
 import { roboto, righteous } from '../fonts/FIndex'
 
+
 const AboutComponent = () => {
   return (
-    <div className="w-screen containerHome mt-28" id="sobre">
+    <div className="w-screen containerHome mt-28" id="sobre" >
       <div className="flex w-full max-w-7xl mx-auto items-center h-full">
         <div>
           <div className="gap-8 rounded-md flex flex-col bg-zinc-900/60 p-8 border border-[var(--primary-color)] w-1/3 justify-center">

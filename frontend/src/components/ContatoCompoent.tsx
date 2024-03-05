@@ -3,10 +3,12 @@ import FormComponent from './FormComponent'
 
 import { IoReturnDownForwardOutline } from 'react-icons/io5'
 import { roboto, righteous } from '../fonts/FIndex'
+import Animations from '@/Animations/Animations'
 
 const ContatoCompoent = () => {
+  Animations()
   return (
-    <div className=" w-screen" id="contato">
+    <div className=" w-screen" id="contato" data-aos="fade-up" data-aos-duration="1000">
       <div className="flex flex-col max-w-7xl mx-auto gap-8 py-24">
         <div className="flex items-center gap-1">
           <IoReturnDownForwardOutline className="text-[var(--primary-color)]" />
