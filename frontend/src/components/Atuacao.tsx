@@ -45,7 +45,7 @@ const Atuacao: IAtuacao[] = [
 const AtuacaoComponent = () => {
   Animations()
   return (
-    <div className="bg-zinc-900 w-screen py-24" id='áreadeatuação' data-aos="zoom-out"
+    <div className="bg-zinc-900 w-screen py-24" id='áreadeatuação' data-aos="fade-up"
     data-aos-duration="1000">
       <div className="flex flex-col max-w-7xl mx-auto gap-2">
         <div className="flex">
