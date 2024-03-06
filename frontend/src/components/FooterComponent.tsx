@@ -85,7 +85,7 @@ const FooterComponent = () => {
           {' '}
           ©2024 por Rosa Muniz - Todos os Direitos Reservados | Desenvolvido por{' '}
           <a
-            className="hover:underline"
+            className="underline "
             href="https://portfolio-seven-flax-47.vercel.app/"
             target="_blank"
             rel="noreferrer"
