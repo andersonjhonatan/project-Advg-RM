@@ -12,10 +12,10 @@ const ValoresComponent = () => {
       data-aos-duration="1000"
     >
       <div className="flex flex-col max-w-7xl mx-auto gap-8 items-center ">
-        <div className="flex gap-4 justify-around">
+        <div className="flex gap-4 justify-around max-md:flex-col px-4">
           {Valores.map((valores: IValores, index) => (
             <div
-              className=" flex flex-col rounded-md py-4 gap-3 items-center text-center p-4 w-full"
+              className=" flex flex-col rounded-md py-4 gap-3 items-center text-center p-4 w-full border border-white "
               key={index}
             >
               <div className="text-4xl text-white">{valores.icon}</div>

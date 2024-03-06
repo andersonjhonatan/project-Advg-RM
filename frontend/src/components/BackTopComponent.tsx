@@ -16,7 +16,7 @@ const ButtonBackTopComponent = (props: Props) => {
   }
   return (
     <div
-      className="absolute bottom-4 left-0 right-0 flex justify-center"
+      className="absolute bottom-4 left-0 right-0 flex justify-center max-md:hidden"
     >
       <button 
         className="text-white p-2 rounded-full flex flex-col items-center"

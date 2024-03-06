@@ -14,8 +14,11 @@ const FormComponent = (props: Props) => {
     console.log(data)
   }
   return (
-    <form onSubmit={handleSubmit(onSubmit)} className="flex flex-col gap-10">
-      <div className="flex w-full justify-between gap-4">
+    <form
+      onSubmit={handleSubmit(onSubmit)}
+      className="flex flex-col gap-10"
+    >
+      <div className="flex w-full justify-between gap-4 ">
         <section className="w-1/2">
           <input
             {...register('name', { required: true })}
@@ -60,7 +63,15 @@ const FormComponent = (props: Props) => {
           </p>
         </section>
       </div>
-      <button type="submit" className='bg-white border border-[var(--primary-color)]  hover:bg-[var(--primary-color)] text-black transition-all duration-300 hover:text-white  py-2 w-56 rounded' aria-labelledby='Botão para registrar'>Enviar</button>
+      <div className='max-md:flex max-md:justify-center'>
+        <button
+          type="submit"
+          className="bg-white border border-[var(--primary-color)]  hover:bg-[var(--primary-color)] text-black transition-all duration-300 hover:text-white  py-2 w-56 rounded"
+          aria-labelledby="Botão para registrar"
+        >
+          Enviar
+        </button>
+      </div>
     </form>
   )
 }

@@ -40,21 +40,21 @@ const CardsComponents = () => {
       data-aos-duration="1000"
     >
       <div className="max-w-7xl mx-auto flex flex-col">
-        <div className="text-3xl text-white p-12">
+        <div className="text-3xl text-white p-12 max-md:flex max-md:flex-col max-md:gap-6">
           <p className="text-center italic text-black">Por que me escolher? </p>
           <p className={`${righteous.className} text-3xl text-black text-center`}>
             Experiência e dedicação ao cliente!
           </p>
         </div>
-        <div className="grid sm:grid-cols-1 md:grid-cols-3 lg:grid-cols-4 gap-4 place-items-stretch ">
+        <div className="grid sm:grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-4 place-items-stretch max-md:px-4 md:px-4">
           {cards.map((card: ICards, index) => (
             <div
-              className="flex flex-col border border-[var(--primary-color)] text-black rounded-md shadow-700 gap-4 p-8 justify-evenly items-center "
+              className="flex flex-col border border-[var(--primary-color)] text-black rounded-md shadow-700 gap-4 p-8 justify-evenly text-center"
               key={index}
             >
               <h1 className={`${roboto.className} text-xl text-black`}>{card.title}</h1>
               <p
-                className={`${roboto.className} text-sm text-black text-justify break-words leading-relaxed whitespace-normal break-all`}
+                className={`${roboto.className} text-sm text-black text-justify break-words leading-relaxed whitespace-normal break-all `}
               >
                 {card.content}
               </p>

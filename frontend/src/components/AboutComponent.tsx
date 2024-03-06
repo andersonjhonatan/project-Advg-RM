@@ -21,7 +21,7 @@ const AboutComponent = () => {
             </p>
 
             <button
-              className={`border border-[var(--primary-color)] text-white rounded-sm p-2 ${roboto.className}`}
+              className={`border border-[var(--primary-color)] text-white rounded-sm p-2 ${roboto.className} hover:bg-[var(--primary-color)] hover:text-black transition-all duration-200`}
               aria-label="Entrar_em_contato"
             >
               Entrar em contato
