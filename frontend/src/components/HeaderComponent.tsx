@@ -32,7 +32,7 @@ const HeaderComponent = () => {
                 width={250}
                 height={100}
                 alt="logo"
-                className={`cursor-pointer max-lg:w-52`}
+                className={`cursor-pointer max-lg:w-52 max-md:w-44`}
               />
             </Link>
           </div>
@@ -57,17 +57,19 @@ const HeaderComponent = () => {
             />
 
             {open && (
-              <div className="absolute top-32 flex flex-col gap-8 p-4 right-0 bg-[var(--primary-color)] w-52 h-screen pt-8 transition-all">
-                {HeaderLinks.map((link: string) => (
-                  <nav key={link} className="flex">
-                    <Link
-                      href={`/#${link.toLowerCase().replaceAll(' ', '')}`}
-                      className={`${poppins.className} text-lg hover:underline underline-offset-4 flex hover:rounded-sm text-white font-bold `}
-                    >
-                      {link}
-                    </Link>
-                  </nav>
-                ))}
+              <div className='absolute max-lg:top-[9rem] max-md:top-[8.2rem] max-sm:top-[8.3rem] left-0 bg-black/70 w-screen h-[calc(100vh-4rem)]'>
+                <div className="absolute flex flex-col gap-8 p-4 right-0 bg-[var(--primary-color)] w-52 h-screen pt-8 transition-all">
+                  {HeaderLinks.map((link: string) => (
+                    <nav key={link} className="flex">
+                      <Link
+                        href={`/#${link.toLowerCase().replaceAll(' ', '')}`}
+                        className={`${poppins.className} text-lg hover:underline underline-offset-4 flex hover:rounded-sm text-white font-bold `}
+                      >
+                        {link}
+                      </Link>
+                    </nav>
+                  ))}
+                </div>
               </div>
             )}
           </div>
