@@ -81,7 +81,7 @@ const FooterComponent = () => {
         </div>
       </div>
       <div className="w-full flex justify-center  bg-zinc-900/90 max-md:text-center">
-        <p className={`${roboto.className} text-xs text-zinc-300`}>
+        <p className={`${roboto.className} text-xs max-md:text-[8px] max-md:px-4 text-zinc-300`}>
           {' '}
           ©2024 por Rosa Muniz - Todos os Direitos Reservados | Desenvolvido por{' '}
           <a
