@@ -17,12 +17,13 @@ const ContatoCompoent = () => {
         <div className="flex flex-col gap-6 ">
           <h1 className={`${righteous.className} text-3xl text-black`}>Como Agendar</h1>
           <p className={`${roboto.className} text-sm text-black`}>
-            Abrangemos todo o território nacional por meio de consultorias online.
-          </p>
-          <p className={`${roboto.className} text-sm text-black break-all text-justify`}>
-            Por favor, compartilhe um resumo do seu caso, suas principais perguntas e a
+            Abrangemos todo o território nacional por meio de consultorias online. Por
+            favor, compartilhe um resumo do seu caso, suas principais perguntas e a
             urgência que você atribui para a resolução.
           </p>
+          <p
+            className={`${roboto.className} text-sm text-black break-all text-justify`}
+          ></p>
         </div>
         <FormComponent />
       </div>
