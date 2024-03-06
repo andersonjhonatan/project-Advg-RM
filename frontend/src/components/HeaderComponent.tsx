@@ -21,6 +21,12 @@ const HeaderComponent = () => {
     setOpen(false)
   }, [])
 
+  const handleClose = () => {
+    setOpen(!open)
+  }
+
+
+
   return (
     <header className="w-screen" id="inicio">
       <div className="flex   bg-[var(--primary-color)] fixed top-0  w-full shadow-sm z-10 ">
@@ -57,7 +63,7 @@ const HeaderComponent = () => {
             />
 
             {open && (
-              <div className='absolute max-lg:top-[9rem] max-md:top-[8.2rem] max-sm:top-[8.3rem] left-0 bg-black/70 w-screen h-[calc(100vh-4rem)]'>
+              <div className='absolute max-lg:top-[9rem] max-md:top-[8.2rem] max-sm:top-[8.3rem] left-0 bg-black/70 w-screen h-[calc(100vh-4rem)]' onClick={handleClose}>
                 <div className="absolute flex flex-col gap-8 p-4 right-0 bg-[var(--primary-color)] w-52 h-screen pt-8 transition-all">
                   {HeaderLinks.map((link: string) => (
                     <nav key={link} className="flex">
