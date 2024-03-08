@@ -29,8 +29,11 @@ const HeaderComponent = () => {
 
   return (
     <header className="w-screen" id="inicio">
-      <div className="flex   bg-[var(--primary-color)] fixed top-0  w-full shadow-sm z-10 ">
-        <div className="flex gap-8 max-w-7xl w-full items-center justify-between mx-auto py-10 max-lg:w-3xl max-lg:px-8 max-md:px-4">
+      <div className="flex containerFooter   bg-zinc-900 phoheader fixed top-0  w-full shadow-sm z-10 photoheader">
+        <div className="w-full bg-zinc-900/90 px-4">
+
+        <div className="flex gap-8 max-w-7xl w-full items-center justify-between mx-auto py-10 max-lg:w-3xl max-lg:px-8 max-md:px-4 ">
+        
           <div className="flex flex-col items-center">
             <Link href="/" className="cursor-pointer" aria-label="logo">
               <Image
@@ -80,6 +83,8 @@ const HeaderComponent = () => {
             )}
           </div>
         </div>
+        </div>
+
       </div>
     </header>
   )
