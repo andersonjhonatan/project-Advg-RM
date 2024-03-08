@@ -9,8 +9,8 @@ export const HeaderLinks = [
   'Inicio',
   'Sobre',
   'Área de Atuação',
-  'Localização',
-  'Blog',
+  /* 'Localização',
+  'Blog', */
   'Contato',
 ]
 
@@ -84,7 +84,7 @@ const HeaderComponent = () => {
           </div>
         </div>
         </div>
-
+9
       </div>
     </header>
   )
