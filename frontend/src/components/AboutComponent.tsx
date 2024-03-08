@@ -1,5 +1,6 @@
 import React from 'react'
 import { roboto, righteous } from '../fonts/FIndex'
+import Link from 'next/link'
 
 
 const AboutComponent = () => {
@@ -20,12 +21,13 @@ const AboutComponent = () => {
               dignissimos nemo aliquid itaque molestias debitis hic provident quos.
             </p>
 
-            <button
+            <Link
               className={`border border-[var(--primary-color)] text-white rounded-sm p-2 ${roboto.className} hover:bg-[var(--primary-color)] hover:text-black transition-all duration-200`}
               aria-label="Entrar_em_contato"
+              href="#contato"
             >
               Entrar em contato
-            </button>
+            </Link>
           </div>
         </div>
       </div>
