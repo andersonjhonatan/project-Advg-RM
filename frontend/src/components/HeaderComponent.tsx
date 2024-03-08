@@ -84,7 +84,6 @@ const HeaderComponent = () => {
           </div>
         </div>
         </div>
-9
       </div>
     </header>
   )

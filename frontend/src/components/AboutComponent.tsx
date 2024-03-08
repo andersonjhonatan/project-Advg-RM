@@ -22,7 +22,7 @@ const AboutComponent = () => {
             </p>
 
             <Link
-              className={`border border-[var(--primary-color)] text-white rounded-sm p-2 ${roboto.className} hover:bg-[var(--primary-color)] hover:text-black transition-all duration-200`}
+              className={`border border-[var(--primary-color)] text-white rounded-sm p-2 ${roboto.className} hover:bg-[var(--primary-color)] hover:text-black transition-all duration-200 text-center`}
               aria-label="Entrar_em_contato"
               href="#contato"
             >

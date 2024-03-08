@@ -65,16 +65,16 @@ const FooterComponent = () => {
                 </p>
               </div>
             ))}
-            <div className="flex gap-4 mt-6 max-md:mt-0 max-md:items-center ">
-              <Link href="https://www.instagram.com/rosamuniz.adv" aria-label='Instagram' className='cursor-pointer'>
+            <div className="flex gap-4 mt-6 max-md:mt-0 max-md:items-center">
+              <Link href="https://www.instagram.com/rosamuniz.adv" aria-label='Instagram' className='cursor-pointer md:z-20'>
                 <SlSocialInstagram size={25} className="text-white" />
               </Link>
               <Link
                 href="https://wa.me/5582996318357"
-                className="flex flex-col items-center justify-center gap-4 cursor-pointer"
+                className="flex flex-col items-center justify-center gap-4 cursor-pointer "
                 aria-label='Whatsapp'
               >
-                <SiWhatsapp size={25} className="text-white" />
+                <SiWhatsapp size={25} className="text-white md:z-20" />
               </Link>
             </div>
           </div>
